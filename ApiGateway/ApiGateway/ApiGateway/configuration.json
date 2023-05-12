@@ -1,0 +1,34 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:4011"
+  },
+  "Routes": [
+    //SERVICE 1
+    {
+      "UpstreamPathTemplate": "/weatherforecast/getweatherdata",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/weatherforecast/getweatherdata",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1702
+        }
+      ]
+    },
+
+    //SERVICE 2
+    {
+      "UpstreamPathTemplate": "/weatherforecast",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/weatherforecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1703
+        }
+      ]
+    }
+  ]
+}

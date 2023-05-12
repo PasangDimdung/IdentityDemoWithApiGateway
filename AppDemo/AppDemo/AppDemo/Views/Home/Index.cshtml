@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WeatherForecastViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <a class="button" asp-controller="Home" asp-action="GetWeatherData">Get weather</a>
+</div>
+
+
+<div>
+    @if (Model != null)
+    {
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Service 1</th>
+                <th>Service 2</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Date</td>
+                    <td>@item.Summary</td>
+                    <td>@item.Summary1</td>
+                </tr>
+            }
+        </table>
+    }
+
+</div>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+
