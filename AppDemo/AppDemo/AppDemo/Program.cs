@@ -16,8 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
     {
         options.Authority = "http://localhost:1700";
 
-        options.ClientId = "random_client";
-        options.ClientSecret = "random_secret";
+        options.ClientId = "client_mvc";
+        options.ClientSecret = "74ba35a3-e6ee-470f-b8d6-9c27f670025a";
 
         options.Scope.Add("demo.service");
         options.Scope.Add("demo.service2");
